@@ -1,0 +1,149 @@
+html
+{
+margin: 0;
+padding: 0;
+}
+
+body
+{
+    font-family: Coronetscript, cursive;
+    line-height: 2.0;
+    background: transparent url(image/sky2.jpg) no-repeat fixed;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    border-style: outset;
+}
+p{
+    margin-top: 0;
+    text-align: justify;
+}
+h1{
+    
+    text-align: center;
+    font-family: 'Itim', cursive; 
+    font-size: xx-large;
+
+}
+header h1{
+    color: rgba(89, 49, 199, 0.959);
+    border: rgb(83, 12, 12);
+    border-style: solid;
+    background: transparent url(image/title1.jpg)  ;
+    outline-style: groove ;
+    margin-right: 450px;
+    margin-top: 20px;
+    margin-left: 50px;
+ 
+
+}
+header h2,
+.preamble h3,
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3
+{
+   margin-left: 50px;
+    margin-right: 450px;
+    text-align: center;
+    border-style: double;
+    background-image: linear-gradient(to right, rgb(130, 176, 202), rgba(22, 151, 211, 0.884));
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: rgba(229, 238, 104, 0.959);
+    position: relative;
+}
+
+p
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 500px;
+    margin-left: 100px;
+    border-style: solid;
+    border-width: 5px 5px 5px 5px;
+    -moz-border-image: url(image/blueborder.jpg) 341 65 78 65 stretch stretch;
+    -webkit-border-image: url(image/blueborder.jpg) 341 65 78 65 stretch stretch;
+    -o-border-image: url(image/blueborder.jpg) 341 65 78 65 stretch stretch;
+    border-image: url(image/blueborder.jpg) 341 65 78 65 stretch stretch;
+    background-color: rgb(51, 165, 194);
+    }
+footer
+{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: lightblue;
+    margin-left: 50px;
+    margin-right: 450px;
+    margin-bottom: 20px;
+    border-style: double;
+
+
+}
+footer > a
+{
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+
+}
+footer a{
+    margin: auto;
+    background-image: url(image/background1.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrapper {
+    position: fixed;
+    top: 50px;
+    right:0px;
+    border-style: solid;
+    border-width: 5px 5px 5px 5px;
+    -moz-border-image: url(image/blueborder.jpg) 341 65 78 65 stretch stretch;
+    -webkit-border-image: url(image/blueborder.jpg) 341 65 78 65 stretch stretch;
+    -o-border-image: url(image/blueborder.jpg) 341 65 78 65 stretch stretch;
+    border-image: url(image/blueborder.jpg) 341 65 78 65 stretch stretch;
+    background-image: url(image/backgroundside.jpg);
+    background-size: 100%;
+    margin-right: 10px;
+}
+.sidebar li
+{
+    padding-right: 50px;
+}
+.sidebar h3{
+    
+}
+.design-name{
+    color: rgb(195, 209, 4);
+}
+.designer-name
+{
+    color: rgb(214, 131, 22);
+}
+.sidebar a:hover, .sidebar a:focus{
+    color: lightgreen;
+
+}
+.design-archives a{
+    color: lightsalmon;
+}
+.zen-resources a{
+    color: rgb(43, 216, 9);
+}
+.sidebar h3{
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    font-size: 24px;
+    color: rgb(15, 60, 66);
+}
+.sidebar{
+    text-align: center;
+}
+footer a:hover{
+    color: khaki;
+    background: rgb(18, 165, 84);
+
+}
