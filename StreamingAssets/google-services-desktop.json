@@ -1,0 +1,156 @@
+{
+  "project_info": {
+    "project_number": "527554078544",
+    "firebase_url": "https://free-puzzle-game-classic.firebaseio.com",
+    "project_id": "free-puzzle-game-classic",
+    "storage_bucket": "free-puzzle-game-classic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527554078544:android:00285687eeb179ab776e55",
+        "android_client_info": {
+          "package_name": "com.game.android.pharaohblockpuzzle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPw_mD-aW482wV3y7ErhIJVtpfCTOxX14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527554078544:android:981d2c7537b36f75776e55",
+        "android_client_info": {
+          "package_name": "com.game.blockpuzzle.star.legend.jewel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPw_mD-aW482wV3y7ErhIJVtpfCTOxX14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527554078544:android:75beded25f97ce8b776e55",
+        "android_client_info": {
+          "package_name": "com.glow.merge.block.shot.us.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPw_mD-aW482wV3y7ErhIJVtpfCTOxX14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527554078544:android:9fae52f427cda838776e55",
+        "android_client_info": {
+          "package_name": "com.puzzle.topgame.box.cat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPw_mD-aW482wV3y7ErhIJVtpfCTOxX14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527554078544:android:f6f177f9de1fe7e1776e55",
+        "android_client_info": {
+          "package_name": "com.unicorn.poly.color.artbook.children"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPw_mD-aW482wV3y7ErhIJVtpfCTOxX14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527554078544-dqtbndc2dc6901q6336uag7fngdlgl5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
