@@ -5,136 +5,351 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Tuan Anh Nguyen - Senior Unity Developer</title>
+<meta name="description" content="Senior Unity / C# developer with 6 years shipping and running live mobile titles at scale, including Lumber Inc (100M+ downloads on Google Play), where I&#x27;m second-in-command on the project, mentoring 3 developers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tuan Anh Nguyen - Senior Unity Developer">
+<meta property="og:description" content="Senior Unity / C# developer with 6 years shipping and running live mobile titles at scale, including Lumber Inc (100M+ downloads on Google Play), where I&#x27;m second-in-command on the project, mentoring 3 developers.">
+<meta property="og:url" content="https://talama191.github.io/">
+<meta property="og:image" content="https://talama191.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316457a'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
 <style>
   :root {
     --ink: #16181d;
     --muted: #5a6270;
     --rule: #dfe3ea;
     --accent: #1a4f8a;
+    --accent-deep: #0f2f55;
     --page: #ffffff;
     --ground: #eef1f6;
+    --chip: #e8f0fa;
+    --good: #17693a;
+    --good-bg: #e3f4e8;
+    --shadow: 0 1px 3px rgba(16, 24, 40, .08), 0 12px 32px rgba(16, 24, 40, .08);
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     background: var(--ground);
     color: var(--ink);
-    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    font: 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .sheet {
-    max-width: 860px;
-    margin: 28px auto 64px;
-    background: var(--page);
-    padding: 44px 52px 52px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(16, 24, 40, .08), 0 12px 32px rgba(16, 24, 40, .06);
-  }
-  .bar {
-    max-width: 860px;
-    margin: 20px auto 0;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .dl {
-    display: inline-block;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    font-size: 13.5px;
-    font-weight: 600;
-    padding: 9px 16px;
-    border-radius: 5px;
-  }
-  .dl:hover { background: #143f70; }
-  h1 {
-    font-size: 30px;
-    line-height: 1.15;
-    margin: 0 0 4px;
-    letter-spacing: -.4px;
-  }
-  h1 + p strong { font-weight: 600; }
-  h2 {
-    font-size: 12.5px;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 30px 0 10px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--rule);
-  }
-  h3 { font-size: 16.5px; margin: 22px 0 2px; }
-  p { margin: 0 0 9px; }
-  p.meta { color: var(--muted); font-size: 13.5px; margin: 0 0 8px; }
-  p.meta em { font-style: normal; }
-  p.contact { color: var(--muted); font-size: 14px; }
-  p.link-line { font-size: 13px; margin: 0 0 8px; }
-  .note { color: var(--muted); }
-  ul { margin: 0 0 12px; padding-left: 19px; }
-  li { margin-bottom: 5px; }
   a { color: var(--accent); }
-  code {
-    font: 13px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    background: #f2f4f8;
-    padding: 1px 5px;
-    border-radius: 3px;
+  img { max-width: 100%; }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+
+  /* Header */
+  .hero {
+    color: #fff;
+    padding: 56px 20px 104px;
+    background:
+      radial-gradient(900px 420px at 88% -20%, rgba(80, 150, 230, .45), transparent 65%),
+      linear-gradient(135deg, #0b203b 0%, #16457a 100%);
   }
+  .hero h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.08; margin: 0 0 10px; letter-spacing: -.6px; }
+  .headline { font-size: clamp(15.5px, 2.2vw, 19px); font-weight: 600; color: #d3e3f7; margin: 0 0 10px; }
+  .where { color: #b3c8e2; margin: 0 0 24px; font-size: 14.5px; }
+  .where a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, .35); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 16px; border-radius: 9px;
+    font-weight: 600; font-size: 14px; text-decoration: none;
+    transition: background .15s, transform .15s;
+  }
+  .btn svg { width: 18px; height: 18px; }
+  .btn-primary { background: #fff; color: var(--accent-deep); }
+  .btn-primary:hover { background: #e6effa; }
+  .btn-ghost { color: #fff; border: 1px solid rgba(255, 255, 255, .35); }
+  .btn-ghost:hover { background: rgba(255, 255, 255, .1); }
+  .btn:focus-visible, .store-btn:focus-visible, .shots a:focus-visible, .store-pill:focus-visible {
+    outline: 3px solid #8fbaf0; outline-offset: 2px;
+  }
+  .section-label { margin: 0; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: #9fbde2; font-weight: 700; }
+
+  /* Games */
+  .games { padding: 0 20px; margin-top: -76px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+  .game {
+    display: flex; flex-direction: column;
+    background: var(--page); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .game:hover { transform: translateY(-4px); box-shadow: 0 2px 6px rgba(16, 24, 40, .1), 0 22px 44px rgba(16, 24, 40, .14); }
+  .banner { display: block; aspect-ratio: 1024 / 500; overflow: hidden; background: #dfe7f1; }
+  .banner img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+  .game:hover .banner img { transform: scale(1.04); }
+  .game-body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 0 20px 20px; }
+  .app-icon {
+    width: 64px; height: 64px; margin-top: -34px; position: relative;
+    border-radius: 16px; border: 3px solid #fff; background: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
+  }
+  .game h3 { margin: 2px 0 0; font-size: 20px; line-height: 1.2; }
+  .kind { margin: -6px 0 0; color: var(--muted); font-size: 13.5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  .chip { font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--accent-deep); }
+  .chip-big { background: var(--good-bg); color: var(--good); }
+  .role { margin: 0; font-size: 14px; font-weight: 600; }
+  .built { margin: 0; padding-left: 18px; font-size: 14px; }
+  .built li { margin-bottom: 4px; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: auto; padding-top: 4px; }
+  .shots a { display: block; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 10px; background: var(--ground); }
+  .shots img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .25s ease; }
+  .shots a:hover img { transform: scale(1.05); }
+  .game-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px; }
+  .store-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #111827; color: #fff; text-decoration: none;
+    padding: 9px 15px; border-radius: 9px; font-weight: 600; font-size: 14px;
+  }
+  .store-btn:hover { background: #26324a; }
+  .store-btn svg { width: 16px; height: 16px; color: #7ee2a8; }
+  .more { font-size: 13.5px; font-weight: 600; text-decoration: none; }
+  .more:hover { text-decoration: underline; }
+  .store-name { margin: -9px 0 0; font-size: 12.5px; color: var(--muted); }
+
+  /* CV */
+  .sheet {
+    max-width: 880px; margin: 40px auto 28px; background: var(--page);
+    padding: 40px 52px 48px; border-radius: 14px; box-shadow: var(--shadow);
+  }
+  .sheet-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .sheet-title h2 { margin: 0; font-size: 24px; letter-spacing: -.3px; }
+  .pdf-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13.5px; font-weight: 600; text-decoration: none; color: var(--accent-deep);
+    border: 1px solid var(--rule); padding: 6px 12px; border-radius: 8px;
+  }
+  .pdf-link svg { width: 16px; height: 16px; }
+  .pdf-link:hover { background: var(--chip); }
+  .cv-section h2 {
+    font-size: 12.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
+    margin: 30px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+  }
+  .cv-section:first-of-type h2 { margin-top: 20px; }
+  .cv-section h3 { font-size: 16.5px; margin: 22px 0 1px; display: flex; align-items: center; gap: 8px; }
+  .cv-section p { margin: 0 0 9px; }
+  .meta { color: var(--muted); font-size: 13.5px; }
+  .meta strong { color: var(--ink); }
+  h4.project { font-size: 15px; margin: 16px 0 3px; display: flex; align-items: center; gap: 8px; font-weight: 400; }
+  .mini-icon { width: 22px; height: 22px; border-radius: 6px; flex: none; }
+  .store-row { font-size: 13px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .store-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-weight: 600; text-decoration: none; color: var(--accent-deep);
+    background: var(--chip); padding: 3px 11px 3px 9px; border-radius: 999px;
+  }
+  .store-pill:hover { background: #d8e6f7; }
+  .store-pill svg { width: 12px; height: 12px; color: var(--good); }
+  .note { color: var(--muted); }
+  .cv-section ul { margin: 0 0 12px; padding-left: 20px; }
+  .cv-section li { margin-bottom: 5px; }
+  ul.skills { list-style: none; padding-left: 0; }
+  code { font: 13px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #f2f4f8; padding: 1px 5px; border-radius: 3px; }
+  footer { text-align: center; color: var(--muted); font-size: 12.5px; padding: 0 20px 36px; }
+
+  /* Screenshot viewer */
+  dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
+  dialog.lightbox::backdrop { background: rgba(6, 12, 24, .82); }
+  .lightbox img {
+    display: block; max-width: 92vw; max-height: 88vh; object-fit: contain;
+    border-radius: 14px; background: #1b2433; box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+  }
+  .lb-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
+    background: rgba(255, 255, 255, .92); color: #111; font-size: 26px; line-height: 1;
+  }
+  .lb-prev { left: -58px; }
+  .lb-next { right: -58px; }
+  .lb-close { top: -18px; right: -18px; transform: none; width: 38px; height: 38px; font-size: 22px; }
+
   @media (max-width: 640px) {
-    .sheet { margin: 12px; padding: 26px 22px 34px; border-radius: 4px; }
-    .bar { margin: 12px 12px 0; }
-    h1 { font-size: 25px; }
+    .hero { padding: 36px 16px 92px; }
+    .games { padding: 0 16px; }
+    .sheet { margin: 28px 12px 20px; padding: 26px 20px 32px; border-radius: 10px; }
+    .lb-prev { left: 6px; } .lb-next { right: 6px; } .lb-close { top: 6px; right: 6px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; }
   }
   @media print {
     body { background: #fff; }
-    .bar { display: none; }
+    .hero { background: none; color: #000; padding: 0 0 6px; }
+    .headline, .where { color: #333; }
+    .where a { color: #000; border: 0; }
+    .actions, .section-label, .games, footer, dialog { display: none; }
     .sheet { box-shadow: none; margin: 0; max-width: none; padding: 0; }
+    .pdf-link { display: none; }
   }
 </style>
 </head>
 <body>
-<div class="bar"><a class="dl" href="Tuan-Anh-Nguyen-CV.pdf" download>Download PDF</a></div>
-<main class="sheet">
-<h1>Tuan Anh Nguyen</h1>
-<p><strong>Senior Unity / Mobile Game Developer · Performance &amp; Live-Ops</strong></p>
-<p>Hanoi, Vietnam · Open to relocation</p>
-<p class="contact">talama191@gmail.com · +84 838 331 032</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/tuan-anh-nguyen-31648513a/">www.linkedin.com/in/tuan-anh-nguyen-31648513a</a></p>
-<p>GitHub: <a href="https://github.com/talama191">github.com/talama191</a></p>
-<h2>Summary</h2>
+<header class="hero">
+  <div class="wrap">
+    <h1>Tuan Anh Nguyen</h1>
+    <p class="headline">Senior Unity Developer · Mobile Game Developer · Performance &amp; LiveOps</p>
+    <p class="where">Hanoi, Vietnam · open to relocation · <a href="mailto:talama191@gmail.com">talama191@gmail.com</a> · <a href="tel:+84838331032">+84 838 331 032</a></p>
+    <nav class="actions" aria-label="Contact and downloads">
+      <a class="btn btn-primary" href="Tuan-Anh-Nguyen-CV.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg> Download CV (PDF)</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/tuan-anh-nguyen-31648513a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/talama191" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="mailto:talama191@gmail.com">Email</a>
+    </nav>
+    <h2 class="section-label" id="games-title">Shipped games</h2>
+  </div>
+</header>
+<section class="games" aria-labelledby="games-title">
+  <div class="wrap grid">
+
+<article class="game">
+  <a class="banner" href="https://play.google.com/store/apps/details?id=com.lumber.inc&amp;gl=us" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="assets/lumber-banner.webp" width="960" height="469" alt="">
+  </a>
+  <div class="game-body">
+    <img class="app-icon" src="assets/lumber-icon.webp" width="64" height="64" alt="Lumber Inc icon">
+    <h3>Lumber Inc</h3>
+    <p class="kind">Idle tycoon, published by AppQuantum</p>
+    <p class="store-name">On Google Play as “Idle Lumber Empire: Tycoon Inc”</p>
+    <ul class="chips"><li class="chip chip-big">100M+ downloads</li><li class="chip">Since Aug 2024</li></ul>
+    <p class="role">Second-in-command on the project, mentoring 3 developers.</p>
+    <ul class="built"><li>Rewrote package storage as true 3D stacking, warm-up held under ~10 KB across thousands of boxes</li><li>Forklift logistics whose order-fulfillment strategies run as live A/B tests</li><li>Shop, events and IAP offers, Google Play Games cloud save, the GitLab CI/CD pipeline</li></ul>
+    <div class="shots" aria-label="Lumber Inc screenshots"><a href="assets/lumber-shot1.webp" data-alt="Lumber Inc: Log processing line" data-w="720" data-h="1280"><img src="assets/lumber-shot1-thumb.webp" width="240" height="427" loading="lazy" alt="Lumber Inc: Log processing line"></a><a href="assets/lumber-shot2.webp" data-alt="Lumber Inc: Trucks and storage" data-w="720" data-h="1280"><img src="assets/lumber-shot2-thumb.webp" width="240" height="427" loading="lazy" alt="Lumber Inc: Trucks and storage"></a><a href="assets/lumber-shot3.webp" data-alt="Lumber Inc: Automated production" data-w="720" data-h="1280"><img src="assets/lumber-shot3-thumb.webp" width="240" height="427" loading="lazy" alt="Lumber Inc: Automated production"></a></div>
+    <div class="game-foot">
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.lumber.inc&amp;gl=us" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14.2-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5z"/></svg><span>Google Play</span></a>
+      <a class="more" href="#lumber">Details in CV</a>
+    </div>
+  </div>
+</article>
+<article class="game">
+  <a class="banner" href="https://play.google.com/store/apps/details?id=com.eastsidegames.milkinc" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="assets/milkfarm-banner.webp" width="960" height="469" alt="">
+  </a>
+  <div class="game-body">
+    <img class="app-icon" src="assets/milkfarm-icon.webp" width="64" height="64" alt="Milk Farm Tycoon icon">
+    <h3>Milk Farm Tycoon</h3>
+    <p class="kind">Idle tycoon, published by Eastside Games</p>
+    
+    <ul class="chips"><li class="chip chip-big">500K+ downloads</li><li class="chip">Feb 2023 - Aug 2024</li></ul>
+    
+    <ul class="built"><li>Conveyor and distribution simulation</li><li>Battle pass, truck-rental system and localization on a Beamable backend</li><li>Profiling-led CPU and draw-call optimization</li></ul>
+    <div class="shots" aria-label="Milk Farm Tycoon screenshots"><a href="assets/milkfarm-shot1.webp" data-alt="Milk Farm Tycoon: Milking" data-w="720" data-h="1558"><img src="assets/milkfarm-shot1-thumb.webp" width="240" height="519" loading="lazy" alt="Milk Farm Tycoon: Milking"></a><a href="assets/milkfarm-shot2.webp" data-alt="Milk Farm Tycoon: Farm expansion map" data-w="720" data-h="1558"><img src="assets/milkfarm-shot2-thumb.webp" width="240" height="519" loading="lazy" alt="Milk Farm Tycoon: Farm expansion map"></a><a href="assets/milkfarm-shot3.webp" data-alt="Milk Farm Tycoon: Farm overview" data-w="720" data-h="1558"><img src="assets/milkfarm-shot3-thumb.webp" width="240" height="519" loading="lazy" alt="Milk Farm Tycoon: Farm overview"></a></div>
+    <div class="game-foot">
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.eastsidegames.milkinc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14.2-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5z"/></svg><span>Google Play</span></a>
+      <a class="more" href="#milkfarm">Details in CV</a>
+    </div>
+  </div>
+</article>
+<article class="game">
+  <a class="banner" href="https://play.google.com/store/apps/details?id=com.bruhs.sportstars" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="assets/sportstars-banner.webp" width="960" height="469" alt="">
+  </a>
+  <div class="game-body">
+    <img class="app-icon" src="assets/sportstars-icon.webp" width="64" height="64" alt="Sport Stars icon">
+    <h3>Sport Stars</h3>
+    <p class="kind">Collection RPG in a sports setting</p>
+    <p class="store-name">On Google Play as “Sport Star: Idle Dream Team”</p>
+    <ul class="chips"><li class="chip">Side project</li><li class="chip">Since Aug 2023</li><li class="chip">~1,800 commits</li></ul>
+    <p class="role">Self-directed and co-developed, second-largest contributor to the codebase.</p>
+    <ul class="built"><li>RPG layer: stats and abilities driving a real-time match sim across eight disciplines</li><li>HQ management sim with agent AI routing each character through a designer-authored routine</li><li>Load time on low-end Android cut from ~35 s to ~20 s</li></ul>
+    <div class="shots" aria-label="Sport Stars screenshots"><a href="assets/sportstars-shot1.webp" data-alt="Sport Stars: HQ management sim" data-w="720" data-h="1280"><img src="assets/sportstars-shot1-thumb.webp" width="240" height="427" loading="lazy" alt="Sport Stars: HQ management sim"></a><a href="assets/sportstars-shot2.webp" data-alt="Sport Stars: Training" data-w="720" data-h="1281"><img src="assets/sportstars-shot2-thumb.webp" width="240" height="427" loading="lazy" alt="Sport Stars: Training"></a><a href="assets/sportstars-shot3.webp" data-alt="Sport Stars: Matches across disciplines" data-w="720" data-h="1281"><img src="assets/sportstars-shot3-thumb.webp" width="240" height="427" loading="lazy" alt="Sport Stars: Matches across disciplines"></a></div>
+    <div class="game-foot">
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.bruhs.sportstars" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14.2-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5z"/></svg><span>Google Play</span></a>
+      <a class="more" href="#sportstars">Details in CV</a>
+    </div>
+  </div>
+</article>
+  </div>
+</section>
+<main class="sheet" id="cv">
+  <div class="sheet-title"><h2>Curriculum vitae</h2><a class="pdf-link" href="Tuan-Anh-Nguyen-CV.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg> Download PDF</a></div>
+<section class="cv-section"><h2>Summary</h2>
 <p>Senior Unity / C# developer with 6 years shipping and running live mobile titles at scale, including <em>Lumber Inc</em> (100M+ downloads on Google Play), where I&#x27;m second-in-command on the project, mentoring 3 developers. Strongest on performance: profiling-led CPU, memory and draw-call optimization across device tiers, plus rewriting systems a live game has outgrown. Examples: a 3D storage system held under ~10 KB warm-up across thousands of objects, ~43% load-time reduction on low-end Android. Delivers live-ops features end to end, architected as true A/B tests rather than just tuning numbers, and builds the tooling, automated testing and CI/CD pipeline behind them, AI-agent-assisted (Claude Code, Unity MCP) included. Open to relocation.</p>
-<p><strong>Shipped:</strong> <em>Lumber Inc</em> (AppQuantum), 100M+ downloads on Google Play · <em>Milk Farm Tycoon</em> (Eastside Games) · <em>Sport Stars</em> (collection RPG)</p>
-<h2>Skills</h2>
-<ul><li><strong>Languages:</strong> C#, TypeScript, Java, SQL, JavaScript</li><li><strong>Performance:</strong> CPU &amp; memory profiling, allocation/GC reduction, draw-call reduction (GPU instancing, texture batching, atlasing, canvas splitting), load-time optimization</li><li><strong>Unity:</strong> UGUI / Canvas, Event System, Graphic Raycaster, DOTween, Animator, Addressables, UniTask, HLSL, Editor scripting, Unity Profiler, Unity Test Framework, Firebase (Remote Config, Analytics, Crashlytics), Google Play Games Services (Saved Games), Beamable (client SDK), Git</li><li><strong>Build &amp; CI:</strong> GitLab CI/CD and runners (Windows, macOS), headless Unity (batchmode) builds, Bash, xcodebuild, Android and iOS release signing, TestFlight upload</li><li><strong>AI-Assisted Development:</strong> Claude Code, Unity MCP, used for scripting, internal tooling and test authoring; own architecture, code quality and review regardless of source</li></ul>
-<h2>Experience</h2>
-<h3>Nopowerup, Senior Game Developer</h3>
-<p class="meta"><em>Hanoi, Vietnam · Dec 2022 – Present</em></p>
-<p>Mobile simulation and tycoon games. Unity, C#.</p>
-<p><strong>Lumber Inc</strong>, idle tycoon, publisher: AppQuantum · 100M+ downloads on Google Play · <em>Aug 2024 – Present</em></p>
-<p class="link-line"><a href="https://play.google.com/store/apps/details?id=com.lumber.inc&amp;gl=us">play.google.com/store/apps/details?id=com.lumber.inc</a> <span class="note">Not available on Vietnam store</span></p>
-<ul><li>Second-in-command on the project since the prior lead moved to another project, mentoring 3 developers and deciding most day-to-day technical questions, escalating the genuinely hard ones.</li><li>Client-side feature delivery on a live build: the shop, limited-time events, IAP offers and the piggy-bank system, each with the UI it carries. Wired up Remote Config so live-ops can switch content on and retune rewards and economy without a new release.</li><li>Built the forklift coordination system matching storage contents to incoming orders, architected with 3 coexisting order-fulfillment strategies as true A/B tests, not just tuning numbers, plus several interchangeable logistics-routing strategies, selected by Remote Config and swapped on restart, with losing variants cut once the data is in.</li><li>Built the UI framework the game&#x27;s screens sit on, including a redirect system: given a destination, it closes whatever popups are open, switches to the correct tab and scrolls the target into view, so a promotion lands on the exact thing being promoted rather than on a menu.</li><li>Rewrote the live game&#x27;s package-storage system to hold warm-up under ~10 KB allocation and a few ms per query across thousands of boxes and 40-50 storage areas. It had shipped as a 2D row/column layout; when the publisher needed non-uniform product shapes that layout couldn&#x27;t represent, I replaced it with true 3D stacking plus a caching strategy.</li><li>Built Google Play Games cloud save: every cloud save is mirrored to Play Games, so players who never linked an account get their progress back after a reinstall or on a new phone. When a device save and a Play Games save both exist, a chooser compares their progress and the player picks, at boot or right after signing in, so neither is ever overwritten silently.</li><li>Profiling-led CPU and memory passes on the simulation loop. Draw-call reduction via GPU instancing and texture batching, plus canvas splitting, redraw batching and atlasing where the UI itself was the cost.</li><li>Built the project&#x27;s GitLab CI/CD pipeline, replacing a deprecated one: headless Unity jobs on Windows and Mac runners produce Android and iOS debug, signed release and low-end asset-variant builds, push Addressables bundles to the content server and upload iOS builds to TestFlight, after checking the version code against the last release tag. Each build runs as two Unity passes so define changes never force a mid-build recompile.</li><li>Built a scenario-based automated test framework: testers compose scenarios from steps (set simulation stage, set currency, trigger an unlock, open a popup, assert a state) and can write and add their own scripts, extending coverage without an engineer in the loop, used by the test team. Unit tests on the systems that warrant them.</li><li>Built a Claude Code-assisted tool that duplicates the limited-time-event structure (scripts, ScriptableObject config, UI bindings) into a new event shell, cutting setup time on new events. A personal workflow tool, not yet rolled out to the team.</li><li>Built internal tools that give designers and testers self-serve control: a tap-triggered debug menu for testers to change game state on the device build, a Google-Sheets-to-Unity balance export pipeline for designers, a mesh combiner, and Editor QoL scripts. Separately, an Addressables duplication checker for the dev team, catching direct references to assets that should be Addressable-only before they silently duplicate into the base build.</li><li>One of two regular code reviewers alongside the tech lead, mostly juniors and occasionally peer or senior work at the lead&#x27;s request. Onboard new joiners with a codebase walkthrough and pair-programming on their first task.</li><li>Triage live crashes from Firebase Crashlytics. First port of call from QA, designers and artists when something breaks, with a confirmed turnaround on the spot.</li><li>Wrote small HLSL effects, for example lumber dissolving as it enters a machine. Traced an iOS-only rendering bug to a shader using <code>half4</code>, where the lower precision surfaced as visible pixel artifacts on device.</li></ul>
-<p><strong>Milk Farm Tycoon</strong>, idle tycoon, publisher: Eastside Games · <em>Feb 2023 – Aug 2024</em></p>
-<p class="link-line"><a href="https://play.google.com/store/apps/details?id=com.eastsidegames.milkinc">play.google.com/store/apps/details?id=com.eastsidegames.milkinc</a></p>
-<p>Runs on a Beamable backend: player state is held server-side rather than in a local save.</p>
-<ul><li>Built the conveyor and distribution simulation.</li><li>Built the battle pass system, the transporter-renting system (players rent trucks to deliver customer orders), and in-game localization, all against the Beamable client SDK, so progression, rental state and economy data persist server-side.</li><li>CPU optimization on the simulation loop via targeted profiling passes, and draw-call reduction via GPU instancing and texture batching.</li><li>Built a fake-shadow-mesh tool to help the team place shadow meshes faster.</li></ul>
-<p><strong>Puzzle prototype</strong> (<em>Dec 2022 – Feb 2023</em>)</p>
-<ul><li>Prototyped a puzzle game in the style of <em>Where&#x27;s My Perry?</em>, with sand in place of the liquid. Player swipes carve away sand so balls can fall through the cuts. Used triangulation to rebuild the sand mesh at runtime.</li></ul>
-<h3>CodeGym, Unity Instructor (Part-time)</h3>
-<p class="meta"><em>Hanoi, Vietnam · Aug 2023 – Aug 2024</em></p>
-<p>Taught Unity / C# game programming part-time, concurrent with the Nopowerup role.</p>
-<ul><li>Taught two cohorts of aspiring developers through Unity and C# game development, from programming fundamentals to building their own playable projects, reviewing their work and mentoring one-on-one to unblock progress.</li></ul>
-<h3>Rainbow Studio, Game Developer</h3>
-<p class="meta"><em>Hanoi, Vietnam · Aug 2020 – Aug 2022</em></p>
+</section>
+<section class="cv-section"><h2>Skills</h2>
+<ul class="skills"><li><strong>Languages:</strong> C#, TypeScript, Java, SQL, JavaScript</li><li><strong>Engineering:</strong> OOP and design patterns (strategy-based variants, data-driven ScriptableObject architecture), data structures and algorithms on hot paths (3D packing cache, spatial-grid broad phase, runtime mesh triangulation), refactoring systems a live game has outgrown, unit and scenario-based automated tests</li><li><strong>Performance:</strong> CPU &amp; memory profiling, allocation/GC reduction, draw-call reduction (GPU instancing, texture batching, atlasing, canvas splitting), load-time optimization</li><li><strong>Unity:</strong> UGUI / Canvas, Event System, Graphic Raycaster, DOTween, Animator, Addressables, UniTask, HLSL shaders, Editor scripting, Unity Profiler, Unity Test Framework</li><li><strong>Mobile &amp; LiveOps:</strong> iOS, Android, in-app purchases (IAP), limited-time events, A/B testing, Firebase (Remote Config, Analytics, Crashlytics), Google Play Games Services, Beamable (client SDK), ad-network SDKs</li><li><strong>Build &amp; CI:</strong> Git, GitLab CI/CD and runners (Windows, macOS), headless Unity (batchmode) builds, Bash, xcodebuild, Android and iOS release signing, TestFlight upload</li><li><strong>AI-Assisted Development:</strong> Claude Code, Unity MCP, used for scripting, internal tooling and test authoring; own architecture, code quality and review regardless of source</li></ul>
+</section>
+<section class="cv-section"><h2>Work Experience</h2>
+<h3><span>Senior Game Developer</span></h3>
+<p class="meta"><strong>Nopowerup</strong> · Hanoi, Vietnam · Dec 2022 - Present</p>
+<p>Mobile simulation and tycoon games in Unity and C#. On Lumber Inc since Aug 2024.</p>
+<h4 class="project" id="lumber"><img class="mini-icon" src="assets/lumber-icon.webp" width="22" height="22" alt=""><span><strong>Lumber Inc</strong>: idle tycoon, publisher AppQuantum, 100M+ downloads on Google Play</span></h4>
+<p class="store-row"><a class="store-pill" href="https://play.google.com/store/apps/details?id=com.lumber.inc&amp;gl=us" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14.2-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5z"/></svg>Google Play</a> <span class="note">not available on Vietnam store</span></p>
+<ul><li>Second-in-command on the project since the prior lead moved on: mentor 3 developers, decide most day-to-day technical questions and escalate the genuinely hard ones. One of two regular code reviewers alongside the tech lead; I onboard new joiners with a codebase walkthrough and first-task pairing.</li><li>Client-side feature delivery on a live build: the shop, limited-time events, IAP offers and the piggy-bank system, each with the UI it carries. Wired up Remote Config so live-ops can switch content on and retune rewards and economy without a new release.</li><li>Built the forklift coordination system matching storage contents to incoming orders: 3 order-fulfillment and several logistics-routing strategies coexist as true A/B tests, selected by Remote Config and swapped on restart, with losing variants cut once the data is in.</li><li>Built the UI framework the game&#x27;s screens sit on, including a redirect system: given a destination, it closes whatever popups are open, switches to the correct tab and scrolls the target into view, so a promotion lands on the exact thing being promoted rather than on a menu.</li><li>Rewrote package storage when the publisher needed non-uniform product shapes the shipped 2D row/column layout could not represent: true 3D stacking plus a caching strategy that holds warm-up under ~10 KB allocation and a few ms per query across thousands of boxes and 40-50 storage areas.</li><li>Built Google Play Games cloud save, so players who never linked an account get their progress back after a reinstall or on a new phone. When a device save and a Play Games save both exist, the player compares them and picks, so neither is overwritten silently.</li><li>Profiling-led CPU and memory passes on the simulation loop. Draw-call reduction via GPU instancing and texture batching, plus canvas splitting, redraw batching and atlasing where the UI itself was the cost.</li><li>Built the project&#x27;s GitLab CI/CD pipeline, replacing a deprecated one: headless Unity jobs on Windows and Mac runners produce Android and iOS debug, signed release and low-end asset-variant builds, push Addressables bundles to the content server and upload iOS builds to TestFlight.</li><li>Built a scenario-based automated test framework used by the test team: testers compose scenarios from steps (set simulation stage, set currency, trigger an unlock, open a popup, assert a state) and add their own scripts, extending coverage without an engineer in the loop. Unit tests on the systems that warrant them.</li><li>Built the tooling around the game: a tap-triggered on-device debug menu for testers, a Google-Sheets-to-Unity balance export pipeline for designers, an Addressables duplication checker that stops assets silently duplicating into the base build, and a Claude Code-assisted event-shell duplicator I use to set up new limited-time events faster.</li><li>Triage live crashes from Firebase Crashlytics. First port of call from QA, designers and artists when something breaks, with a confirmed turnaround on the spot.</li><li>Wrote small HLSL effects, for example lumber dissolving as it enters a machine. Traced an iOS-only rendering bug to a shader using <code>half4</code>, where the lower precision surfaced as pixel artifacts on device.</li></ul>
+<h4 class="project" id="milkfarm"><img class="mini-icon" src="assets/milkfarm-icon.webp" width="22" height="22" alt=""><span><strong>Milk Farm Tycoon</strong>: idle tycoon, publisher Eastside Games</span></h4>
+<p class="store-row"><a class="store-pill" href="https://play.google.com/store/apps/details?id=com.eastsidegames.milkinc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14.2-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5z"/></svg>Google Play</a></p>
+<ul><li>Built the conveyor and distribution simulation. Built the battle pass, the transporter-renting system (players rent trucks to deliver customer orders) and in-game localization against the Beamable client SDK, so progression, rental state and economy data persist server-side rather than in a local save.</li><li>CPU optimization on the simulation loop via targeted profiling passes, draw-call reduction via GPU instancing and texture batching, and a fake-shadow-mesh tool for the team.</li></ul>
+<h4 class="project"><span><strong>Puzzle prototype</strong></span></h4>
+<ul><li>Prototyped a puzzle game in the style of <em>Where&#x27;s My Perry?</em>, with sand in place of the liquid: player swipes carve away sand so balls can fall through the cuts, and the sand mesh is rebuilt at runtime by triangulation.</li></ul>
+<h3><span>Unity Instructor (Part-time)</span></h3>
+<p class="meta"><strong>CodeGym</strong> · Hanoi, Vietnam · Aug 2023 - Aug 2024</p>
+<ul><li>Taught two cohorts of aspiring developers Unity and C# game development, from programming fundamentals to their own playable projects, reviewing their work and mentoring one-on-one.</li></ul>
+<h3><span>Game Developer</span></h3>
+<p class="meta"><strong>Rainbow Studio</strong> · Hanoi, Vietnam · Aug 2020 - Aug 2022</p>
 <p>Mobile hyper-casual games (Unity, C#) and web games (Egret engine, TypeScript).</p>
-<ul><li>Gameplay and UI implementation across multiple small titles, plus internal tools for processing raw sprite, animation and game data.</li><li>Ad-network and IAP SDK integration.</li></ul>
-<h2>Side Project</h2>
-<h3>Sport Stars, Unity mobile collection RPG in a sports setting</h3>
-<p class="meta"><em>Aug 2023 – Present</em></p>
-<p class="link-line"><a href="https://play.google.com/store/apps/details?id=com.bruhs.sportstars">play.google.com/store/apps/details?id=com.bruhs.sportstars</a></p>
-<p>A self-directed, co-developed, shipped side project. Players collect and level character cards carrying rarity-tagged, rolled abilities and per-discipline stats, build squads, and push a campaign plus championship and gauntlet ladders, funded by chests, missions and reward tracks. Three years in and roughly 1,800 commits, the second-largest contributor on the codebase. Data-driven, ScriptableObject-based architecture.</p>
-<ul><li>Built the RPG layer: the character stats-and-abilities system, where rarity-tagged ability assets roll onto a card and resolve into per-match runtime behaviours, and the real-time match simulation those stats and abilities drive across eight disciplines.</li><li>Built the HQ management sim where players train those characters: facility logistics with an autonomous agent AI that routes each card through a designer-authored routine, the amenity system, and the training assignment that grows each character&#x27;s stats. Also built the mission and reward system, and a UI redirect that sends the player straight to a target screen.</li><li>Reduced load time on low-end Android (Samsung A07-class hardware) from ~35 s to ~20 s, roughly 43% on the device class where load time hurts most. CPU optimization across the update loop.</li><li>Built designer-facing balance tooling: Google Sheets with an export script that outputs code designers paste straight into Unity.</li></ul>
-<h2>Education &amp; Languages</h2>
-<p><strong>Hanoi University</strong>, B.Sc. Computer Science (Software Engineering), <em>Aug 2018 – Jun 2023</em></p>
-<p><strong>English</strong>: C1 (professional working proficiency) · <strong>Vietnamese</strong>: native</p>
+<ul><li>Gameplay and UI implementation across multiple small titles, ad-network and IAP SDK integration, and internal tools for processing raw sprite, animation and game data.</li></ul>
+</section>
+<section class="cv-section"><h2>Projects</h2>
+<h3 id="sportstars"><img class="mini-icon" src="assets/sportstars-icon.webp" width="22" height="22" alt=""><span>Sport Stars, Unity mobile collection RPG in a sports setting</span></h3>
+<p class="store-row"><a class="store-pill" href="https://play.google.com/store/apps/details?id=com.bruhs.sportstars" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14.2-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5z"/></svg>Google Play</a></p>
+<p>A self-directed, co-developed, shipped side project, in development since Aug 2023: roughly 1,800 commits, the second-largest contributor on the codebase. Players collect and level character cards carrying rolled abilities and per-discipline stats, build squads and push campaign and ladder content.</p>
+<ul><li>Built the RPG layer: the character stats-and-abilities system, where rarity-tagged ability assets roll onto a card and resolve into per-match runtime behaviours, and the real-time match simulation those stats and abilities drive across eight disciplines.</li><li>Built the HQ management sim where players train those characters: facility logistics with an autonomous agent AI that routes each card through a designer-authored routine, the amenity system, and the training assignment that grows each character&#x27;s stats. Also built the mission and reward system.</li><li>Reduced load time on low-end Android (Samsung A07-class hardware) from ~35 s to ~20 s, roughly 43% on the device class where load time hurts most. CPU optimization across the update loop.</li></ul>
+</section>
+<section class="cv-section"><h2>Education</h2>
+<h3><span>Bachelor of Science in Computer Science (Software Engineering)</span></h3>
+<p class="meta"><strong>Hanoi University</strong> · Hanoi, Vietnam · Aug 2018 - Jun 2023</p>
+</section>
+<section class="cv-section"><h2>Languages</h2>
+<p>English (C1, professional working proficiency), Vietnamese (native)</p>
+</section>
 </main>
+<footer>Updated 27 Sep 2026</footer>
+<dialog class="lightbox" aria-label="Screenshot">
+  <img alt="">
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
+  <button class="lb-btn lb-next" type="button" aria-label="Next screenshot">&#8250;</button>
+  <button class="lb-btn lb-close" type="button" aria-label="Close">&#215;</button>
+</dialog>
+<script>
+(function () {
+  var dlg = document.querySelector("dialog.lightbox");
+  if (!dlg || !dlg.showModal) return;  // no <dialog>: thumbnails just open the image
+  var img = dlg.querySelector("img"), group = [], idx = 0;
+  function fit() {
+    // Size the viewer from the known image size, so it is right before the image arrives.
+    var a = group[idx], w = +a.getAttribute("data-w"), h = +a.getAttribute("data-h");
+    var s = Math.min(window.innerWidth * 0.92 / w, window.innerHeight * 0.88 / h, 1);
+    img.style.width = Math.round(w * s) + "px";
+    img.style.height = Math.round(h * s) + "px";
+  }
+  function show(i) {
+    idx = (i + group.length) % group.length;
+    fit();
+    img.src = group[idx].href;
+    img.alt = group[idx].getAttribute("data-alt");
+  }
+  window.addEventListener("resize", function () { if (dlg.open) fit(); });
+  document.querySelectorAll(".shots a").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      group = Array.prototype.slice.call(a.parentNode.querySelectorAll("a"));
+      show(group.indexOf(a));
+      dlg.showModal();
+    });
+  });
+  dlg.querySelector(".lb-prev").addEventListener("click", function () { show(idx - 1); });
+  dlg.querySelector(".lb-next").addEventListener("click", function () { show(idx + 1); });
+  dlg.querySelector(".lb-close").addEventListener("click", function () { dlg.close(); });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") show(idx - 1);
+    if (e.key === "ArrowRight") show(idx + 1);
+  });
+})();
+</script>
 </body>
 </html>
