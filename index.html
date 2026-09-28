@@ -194,6 +194,8 @@
     .pdf-link { display: none; }
   }
 </style>
+<script>try{if(/[?&]notrack/.test(location.search))localStorage.setItem('umami.disabled','1')}catch(e){}</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="ab08d07b-0260-4f79-9d79-b8727d47d64c" data-domains="talama191.github.io"></script>
 </head>
 <body>
 <header class="hero">
@@ -202,7 +204,7 @@
     <p class="headline">Senior Unity Developer · Mobile Game Developer · Performance &amp; LiveOps</p>
     <p class="where">Hanoi, Vietnam · open to relocation · <a href="mailto:talama191@gmail.com">talama191@gmail.com</a> · <a href="tel:+84838331032">+84 838 331 032</a></p>
     <nav class="actions" aria-label="Contact and downloads">
-      <a class="btn btn-primary" href="Tuan-Anh-Nguyen-CV.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg> Download CV (PDF)</a>
+      <a class="btn btn-primary" href="Tuan-Anh-Nguyen-CV.pdf" download onclick="window.umami&&umami.track('Download PDF')"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg> Download CV (PDF)</a>
       <a class="btn-icon" href="https://www.linkedin.com/in/tuan-anh-nguyen-31648513a/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
       <a class="btn-icon" href="https://github.com/talama191" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
       <a class="btn-icon" href="mailto:talama191@gmail.com" aria-label="Email talama191@gmail.com" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></g></svg></a>
@@ -273,7 +275,7 @@
   </div>
 </section>
 <main class="sheet" id="cv">
-  <div class="sheet-title"><h2>Curriculum vitae</h2><a class="pdf-link" href="Tuan-Anh-Nguyen-CV.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg> Download PDF</a></div>
+  <div class="sheet-title"><h2>Curriculum vitae</h2><a class="pdf-link" href="Tuan-Anh-Nguyen-CV.pdf" download onclick="window.umami&&umami.track('Download PDF')"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg> Download PDF</a></div>
 <section class="cv-section"><h2>Summary</h2>
 <p>Senior Unity / C# developer with 6 years shipping and running live mobile titles at scale, including <em>Lumber Inc</em> (100M+ downloads on Google Play), where I&#x27;m second-in-command on the project, mentoring 3 developers. Strongest on performance: profiling-led CPU, memory and draw-call optimization across device tiers, plus rewriting systems a live game has outgrown. Examples: a 3D storage system held under ~10 KB warm-up across thousands of objects, ~43% load-time reduction on low-end Android. Delivers live-ops features end to end, architected as true A/B tests rather than just tuning numbers, and builds the tooling, automated testing and CI/CD pipeline behind them, AI-agent-assisted (Claude Code, Unity MCP) included. Open to relocation.</p>
 </section>
@@ -314,7 +316,7 @@
 <p>English (C1, professional working proficiency), Vietnamese (native)</p>
 </section>
 </main>
-<footer>Updated 27 Sep 2026</footer>
+<footer>Updated 28 Sep 2026</footer>
 <dialog class="lightbox" aria-label="Screenshot">
   <img alt="">
   <button class="lb-btn lb-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
